@@ -170,22 +170,31 @@ var deepsearchHtml = function (source) {
 };
 
 
-
-
-
-
-
-
-
 // var b = deep(a);
 // a.subcategory[1]['name'] = 'afdsafds';
 deepsearch1(a);
 
 deepsearchHtml(a);
-console.log(_html);
 document.getElementById('table').innerHTML = _html;
 
+// 事件绑定
+var clickLi = $('li');
+var liArr = [];
+for (var i = 0; i < clickLi.length; i++) {
+    if ($(clickLi[i]).siblings().length >= 1) {
+        liArr.push(clickLi[i]);
+    }
+}
 
+// console.log(liArr);
+for (var i = 0; i < liArr.length; i++) {
+    $(liArr[i]).click(function () {
+        // sub tree
+        var sub_tree = $(this).siblings();
+        sub_tree.toggle();
+
+    });
+}
 
 // 后面还应该实现关于这样结构的增删改差的实现
 
