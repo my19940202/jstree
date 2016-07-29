@@ -1,0 +1,21 @@
+{
+  "name": "js tree test",
+  "version": "0.0.0",
+  "authors": [
+    "xishengbo <xishengbo@baidu.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.2.0"
+  }
+}
